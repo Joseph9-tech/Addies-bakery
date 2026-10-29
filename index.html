@@ -1,0 +1,276 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Looking for delicious birthday cakes and pastries in Takoradi,
+   Ghana?Addies Bakery offers freshly baked treats made with love. Order your custom cake today!">
+   <meta name="robots" content="index, follow">
+   <meta property="og:title" content="Addies Bakery | Birthday Cakes & Pastries in Takoradi">
+  <meta property="og:description" content="Celebrate your special moments with cakes and pastries from Addies Bakery in Takoradi, Ghana.">
+  <meta property="og:image" content="images/home-bakery.jpeg">
+  <meta property="og:type" content="website">
+  <title>Addies Bakery | Birthday Cakes & Pastries in Takoradi</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+<header class="site-header">
+  <div class="navbar">
+    <a class="logo" href="#home">Addies Bakery</a>
+    <button id="menuToggle" class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false">☰</button>
+    <nav id="navLinks" class="nav-links" aria-label="Main navigation">
+      <a href="#home">Home</a>
+      <a href="#products">Our Treats</a>
+      <a href="#about">About</a>
+      <a href="#custom-cakes">Custom Cakes</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <button
+  id="cartButton"
+  class="cart-button"
+  type="button"
+  aria-label="Open shopping cart"
+  aria-controls="cartSidebar"
+  aria-expanded="false"
+>
+  <span class="cart-text">Cart (</span><span id="cartCount">0</span><span class="cart-text">)</span>
+  <span class="cart-icon" aria-hidden="true">🛒</span>
+</button>
+    
+
+
+</header>
+
+<main>
+  <section id="home" class="hero">
+    <div class="hero-content">
+      <p class="eyebrow">FRESHLY BAKED WITH LOVE</p>
+      <h1>Sweet Moments Begin Here</h1>
+      <p>Delicious cakes, pastries and treats made to make your special moments sweeter.</p>
+      <a class="btn" href="#products">Explore Our Treats</a>
+    </div>
+  </section>
+
+  <section id="products" class="section products">
+    <div class="section-heading">
+      <p class="eyebrow">MADE WITH LOVE</p>
+      <h2>Our Bakery Treats</h2>
+      <p>Choose your favourites and add them to your cart.</p>
+    </div>
+    <div id="product-grid" class="product-grid" aria-live="polite"></div>
+  </section>
+
+  <section id="about" class="section about">
+    <div class="about-content">
+      <img src="images/the baker.jpeg" alt="The baker behind Addies Bakery" class="baker-photo" onerror="this.style.display='none'">
+      <div>
+        <p class="eyebrow">OUR STORY</p>
+        <h2>A Little About Addies Bakery</h2>
+        <p>Hello, I’m <strong>the baker</strong>. I started baking at home in Takoradi for family birthdays, and friends soon began asking for cakes of their own.</p>
+        <p>Addies Bakery makes cakes and treats for birthdays, celebrations, gifts and everyday cravings. Every order is prepared with care.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="custom-cakes" class="custom-cakes-section">
+    <div class="custom-cakes-content">
+      <p class="eyebrow">MADE JUST FOR YOU</p>
+      <h2>Need a Custom Cake?</h2>
+      <p>Tell us about your celebration, flavour, size and design. We’ll discuss availability and pricing before confirming your order.</p>
+      <ul>
+        <li>Birthdays and anniversaries</li>
+        <li>Weddings and engagements</li>
+        <li>Graduations and special events</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="custom-cake-form-section">
+  <h2>Request Your Custom Cake</h2>
+  <p>Choose your cake type and details. We'll confirm availability and the final price on WhatsApp.</p>
+
+  <form id="customCakeForm">
+    <label for="cakeOccasion">Occasion *</label>
+    <select id="cakeOccasion" required>
+      <option value="">Choose an occasion</option>
+      <option>Birthday</option>
+      <option>Wedding</option>
+      <option>Anniversary</option>
+      <option>Graduation</option>
+      <option>Other celebration</option>
+    </select>
+
+    <label for="cakeCategory">Type of cake *</label>
+    <select id="cakeCategory" required>
+      <option value="">Choose cake type</option>
+      <option value="raw">Raw cake</option>
+      <option value="decorated">Decorated cake</option>
+      <option value="wedding">Wedding cake</option>
+      <option value="other">Other / special design</option>
+    </select>
+
+    <div id="rawCakeFields" hidden>
+      <label for="cakeFlavour">Raw cake flavour *</label>
+      <select id="cakeFlavour">
+        <option value="">Choose flavour</option>
+        <option>Vanilla</option>
+        <option>Red Velvet</option>
+        <option>Chocolate</option>
+        <option>Fruit</option>
+        <option>Carrot</option>
+        <option>Strawberry</option>
+        <option>Orange</option>
+        <option>Cookies &amp; Cream</option>
+        <option>Biscoff</option>
+      </select>
+
+      <label for="rawCakeSize">Cake size *</label>
+      <select id="rawCakeSize">
+        <option value="">Choose size</option>
+        <option value="5">5 inches</option>
+        <option value="6">6 inches</option>
+        <option value="8">8 inches</option>
+        <option value="10">10 inches</option>
+        <option value="12">12 inches</option>
+      </select>
+    </div>
+
+    <div id="decoratedCakeFields" hidden>
+      <label for="decoratedCakeSize">Cake size *</label>
+      <select id="decoratedCakeSize">
+        <option value="">Choose size</option>
+        <option value="4">4 inches</option>
+        <option value="5">5 inches</option>
+        <option value="6">6 inches</option>
+        <option value="8">8 inches</option>
+        <option value="10">10 inches</option>
+        <option value="12">12 inches</option>
+      </select>
+
+      <label for="cakeLayers">Number of layers *</label>
+      <select id="cakeLayers">
+        <option value="">Choose layers</option>
+        <option value="2">2 layers</option>
+        <option value="3">3 layers</option>
+        <option value="4">4 layers</option>
+        <option value="5">5 layers</option>
+        <option value="6">6 layers</option>
+        <option value="7">7 layers</option>
+        <option value="8">8 layers</option>
+      </select>
+    </div>
+
+    <div id="weddingCakeFields" hidden>
+      <label for="weddingTierChoice">Wedding cake tiers *</label>
+      <select id="weddingTierChoice">
+        <option value="">Choose tiers</option>
+        <option value="two">Two-tier cake</option>
+        <option value="three">Three-tier cake</option>
+      </select>
+
+      <label for="weddingTierSize">Tier size combination *</label>
+      <select id="weddingTierSize">
+        <option value="">Choose size combination</option>
+      </select>
+    </div>
+
+    <div id="otherCakeFields" hidden>
+      <p>Describe your idea below. The bakery will provide a quotation.</p>
+    </div>
+
+    <div id="customCakePrice" aria-live="polite">
+      Select a cake type to see available pricing.
+    </div>
+
+    <label for="cakeDesign">Design and colours *</label>
+    <textarea id="cakeDesign" rows="3" maxlength="500" required
+      placeholder="Describe the design, colours, theme or decorations"></textarea>
+
+    <label for="cakeMessage">Words on the cake</label>
+    <input id="cakeMessage" maxlength="150"
+      placeholder="e.g. Happy Birthday Ama">
+
+    <label for="cakeDate">Date needed *</label>
+    <input id="cakeDate" type="date" required>
+
+    <label for="cakeBudget">Budget in Ghana cedis (optional)</label>
+    <input id="cakeBudget" type="number" min="0" step="1"
+      placeholder="e.g. 500">
+
+    <label for="cakeCustomerName">Your full name *</label>
+    <input id="cakeCustomerName" required maxlength="100" autocomplete="name">
+
+    <label for="cakeCustomerPhone">Your phone number *</label>
+    <input id="cakeCustomerPhone" type="tel" required maxlength="25"
+      autocomplete="tel" placeholder="e.g. 0241234567">
+
+    <button class="custom-cake-button" type="submit">
+      Send Custom Cake Request
+    </button>
+  </form>
+</section>
+
+  <section id="reviews" class="reviews-section">
+    <p class="eyebrow">KIND WORDS</p>
+    <h2>Happy Customers</h2>
+    <p class="reviews-subtitle">A few words from people who have enjoyed our treats.</p>
+
+    <div class="reviews-window">
+      <div id="reviewsTrack" class="reviews-track">
+        <article class="review-card">
+          <div class="review-stars">★★★★★</div>
+          <p>The cake was fresh, beautiful and delicious. Everyone enjoyed it!</p>
+          <h3>A happy customer</h3>
+          <span>Celebration cake</span>
+        </article>
+
+        <article class="review-card">
+          <div class="review-stars">★★★★★</div>
+          <p>The pastries were tasty and neatly prepared. I’ll order again.</p>
+          <h3>A returning customer</h3>
+          <span>Bakery treats</span>
+        </article>
+
+        <article class="review-card">
+          <div class="review-stars">★★★★★</div>
+          <p>My order looked lovely and made the occasion extra special.</p>
+          <h3>A satisfied customer</h3>
+          <span>Special occasion</span>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="section contact">
+    <p class="eyebrow">LET’S MAKE IT SWEET</p>
+    <h2>Contact Addies Bakery</h2>
+    <p>Have a question or a special request? Get in touch and we’ll be happy to help.</p>
+    <a class="btn" href="https://wa.me/233534710630" target="_blank" rel="noopener noreferrer">Chat with Us on WhatsApp</a>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>© <span id="currentYear"></span> Addies Bakery. Made with love.</p>
+</footer>
+
+<div id="cartOverlay" class="cart-overlay"></div>
+
+<aside id="cartSidebar" class="cart-sidebar" aria-label="Shopping cart" aria-hidden="true">
+  <div class="cart-header">
+    <h2>Your Cart</h2>
+    <button id="closeCartBtn" type="button" aria-label="Close cart">✕</button>
+  </div>
+
+  <div id="cartItems" class="cart-items"></div>
+
+  <div class="cart-footer">
+    <h3>Total: GH₵ <span id="cartTotal">0.00</span></h3>
+    <button id="checkoutBtn" class="btn cart-action" type="button" disabled>Order via WhatsApp</button>
+    <button id="continueShoppingBtn" type="button">Continue Shopping</button>
+  </div>
+</aside>
+</body>
+</html>

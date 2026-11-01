@@ -1419,3 +1419,149 @@ body.product-modal-open {
 .view-all-products-btn[hidden] {
   display: none;
 }
+/* =====================================
+   ADDIES BAKERY - GET IN TOUCH
+===================================== */
+
+.contact {
+  background: #fff;
+  padding: 65px 8% 55px;
+  text-align: left;
+}
+
+.contact-container {
+  max-width: 850px;
+  margin: 0 auto;
+}
+
+.contact h2 {
+  color: #241b17;
+  font-family: Georgia, serif;
+  font-size: clamp(2rem, 4vw, 2.5rem);
+  margin-bottom: 45px;
+}
+
+.contact-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 25px;
+  margin-bottom: 35px;
+}
+
+.contact-icon {
+  font-size: 30px;
+  min-width: 40px;
+  line-height: 1.5;
+}
+
+.contact-item h3 {
+  color: #51443d;
+  font-size: 1.5rem;
+  margin-bottom: 3px;
+}
+
+.contact-item p {
+  color: #625951;
+  font-size: 1.15rem;
+  margin: 0 0 5px !important;
+}
+
+.contact-item a {
+  color: #4b2e1f;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.contact-item a:hover {
+  color: #b87945;
+}
+
+.contact-item .whatsapp-link {
+  display: inline-block;
+  margin-top: 7px;
+  color: #6b3e26;
+  font-size: 0.95rem;
+  text-decoration: underline;
+}
+
+/* Footer */
+.site-footer {
+  background: #fff;
+  border-top: 1px solid #d8d0ca;
+  padding: 30px 15px;
+  text-align: center;
+  color: #625951;
+  font-size: 1rem;
+}
+
+.site-footer p {
+  margin: 5px 0;
+}
+
+.footer-tagline {
+  font-size: 0.9rem;
+  color: #8b735f;
+}
+
+@media (max-width: 600px) {
+  .contact {
+    padding: 50px 7% 40px;
+  }
+
+  .contact h2 {
+    margin-bottom: 35px;
+  }
+
+  .contact-item {
+    gap: 18px;
+    margin-bottom: 30px;
+  }
+
+  .contact-icon {
+    font-size: 26px;
+    min-width: 35px;
+  }
+
+  .contact-item h3 {
+    font-size: 1.3rem;
+  }
+
+  .contact-item p {
+    font-size: 1.05rem;
+  }
+
+  .site-footer {
+    padding: 25px 15px;
+  }
+}
+.contact-icon {
+  width: 40px;
+  min-width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  color: #171717;
+}
+
+.contact-icon svg {
+  width: 36px;
+  height: 36px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+@media (max-width: 600px) {
+  .contact-icon {
+    width: 35px;
+    min-width: 35px;
+  }
+
+  .contact-icon svg {
+    width: 32px;
+    height: 32px;
+  }
+}

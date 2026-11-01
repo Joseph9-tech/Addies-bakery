@@ -1365,33 +1365,94 @@ body.product-modal-open {
     transition: none;
   }
 }
-
-/* Desktop: show Cart (0), hide the icon */
-.cart-icon {
+/* Shopping basket icon on all devices */
+.cart-button .cart-text {
   display: none;
 }
 
-/* Mobile: show only the cart icon */
+.cart-button .cart-icon {
+  display: inline-block;
+  font-size: 26px;
+  line-height: 1;
+}
+
+.cart-button {
+  width: 58px;
+  height: 48px;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Slightly larger basket on mobile */
 @media (max-width: 600px) {
-  .cart-button .cart-text {
-    display: none;
-  }
-
-  .cart-button .cart-icon {
-    display: inline-block;
-    font-size: 24px;
-    line-height: 1;
-  }
-
   .cart-button {
     width: 58px;
     height: 58px;
-    padding: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  }
+
+  .cart-button .cart-icon {
+    font-size: 27px;
   }
 }
+
+/* =====================================
+   ADDIES BAKERY - STYLED SHOPPING CART
+===================================== */
+
+.cart-button {
+  width: 58px;
+  height: 50px;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #f3dfbd;
+  color: #6b3e26;
+  border: 2px solid #d5ae79;
+  border-radius: 14px;
+
+  box-shadow: 0 4px 10px rgba(75, 46, 31, 0.15);
+  transition: all 0.25s ease;
+}
+
+.cart-button .cart-text {
+  display: none;
+}
+
+.cart-button .cart-icon {
+  display: inline-block;
+  font-size: 28px;
+  line-height: 1;
+  filter: none;
+}
+
+.cart-button:hover {
+  background: #6b3e26;
+  color: #fff;
+  border-color: #6b3e26;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(75, 46, 31, 0.22);
+}
+
+.cart-button:active {
+  transform: scale(0.95);
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .cart-button {
+    width: 55px;
+    height: 55px;
+  }
+
+  .cart-button .cart-icon {
+    font-size: 29px;
+  }
+}
+
 /* View All Products button */
 .view-all-products-btn {
   display: block;
